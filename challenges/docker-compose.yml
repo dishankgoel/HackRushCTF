@@ -1,8 +1,0 @@
-services:
-  pwn:
-    image: "dishankgoel/hackrushctf:pwn"
-    ports: 
-      - "12345:12345"
-      - "12346:12346"
-      - "12347:12347"
-      - "1337:1337"
