@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   pwn:
     image: "dishankgoel/hackrushctf:pwn"
