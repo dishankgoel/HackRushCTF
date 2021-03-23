@@ -25,7 +25,7 @@ void handle_timing() {
 }
 
 ll fof(ll value) {
-    if(value <= 3) {
+    if(value <= 2) {
         return value;
     }
     processing();

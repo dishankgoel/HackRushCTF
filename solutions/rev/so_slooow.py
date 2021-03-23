@@ -20,7 +20,6 @@ for i in range(len(flag)):
 
 print(encoded)
 
-
 # Solution part
 
 decoded = []
